@@ -1,5 +1,6 @@
 package com.cloudecir.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ModuleDTO {
@@ -11,6 +12,10 @@ public class ModuleDTO {
     private String description; 
 
     private List<OperationDTO> operations;
+
+    public ModuleDTO() {
+        this.operations = new ArrayList<OperationDTO>();
+    }
 
     public String getName() {
         return name;
@@ -43,6 +48,8 @@ public class ModuleDTO {
     public void setName(String name) {
         this.name = name;
     }
-    
-    
+      
+    public void addOperation(OperationDTO operationDto) {
+        this.operations.add(operationDto);
+    }  
 }

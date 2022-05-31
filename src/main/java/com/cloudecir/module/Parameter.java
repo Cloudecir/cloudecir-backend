@@ -146,6 +146,14 @@ class Parameter {
         this.mask = mask;
     }
 
+    public List<String> getValues() {
+        return values;
+    }
+
+    public void setValues(List<String> values) {
+        this.values = values;
+    }
+
     public String getDefaultValue() {
         return defaultValue;
     }

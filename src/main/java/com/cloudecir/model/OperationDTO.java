@@ -1,5 +1,6 @@
 package com.cloudecir.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OperationDTO {
@@ -17,6 +18,10 @@ public class OperationDTO {
     private String approver;
 
     private List<ParameterDTO> parameters;
+
+    public OperationDTO() {
+        this.parameters = new ArrayList<ParameterDTO>();
+    }
 
     public String getName() {
         return name;
@@ -72,6 +77,10 @@ public class OperationDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void addParameter(ParameterDTO parameterDto) {
+        this.parameters.add(parameterDto);
     }
     
 }

@@ -1,8 +1,7 @@
-package com.cloudecir;
+package com.cloudecir.controllers;
 
 import java.util.List;
 
-import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,8 +11,6 @@ import javax.ws.rs.core.MediaType;
 import com.cloudecir.model.ModuleDTO;
 import com.cloudecir.module.ModuleService;
 
-import org.eclipse.microprofile.faulttolerance.Retry;
-
 @Path("/modules")
 public class ModulesController {
 
@@ -22,8 +19,6 @@ public class ModulesController {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Retry
- //   @RolesAllowed("user")
     public List<ModuleDTO> listModules() {
         return service.listModules();
     }
