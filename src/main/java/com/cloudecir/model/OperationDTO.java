@@ -19,8 +19,18 @@ public class OperationDTO {
 
     private List<ParameterDTO> parameters;
 
+    private String validator;
+
     public OperationDTO() {
         this.parameters = new ArrayList<ParameterDTO>();
+    }
+
+    public String getValidator() {
+        return validator;
+    }
+
+    public void setValidator(String validator) {
+        this.validator = validator;
     }
 
     public String getName() {

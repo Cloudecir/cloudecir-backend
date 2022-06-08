@@ -2,7 +2,8 @@ package com.cloudecir.module;
 
 public enum Datatype {
 
-    YPE_STRING(Constants.STRING, ""), 
+    TYPE_STRING(Constants.STRING, ""), 
+    TYPE_SECRET(Constants.STRING, ""), //TODO: ajustar o formato
 	TYPE_INTEGER(Constants.INTEGER, ""),
 	TYPE_DOUBLE(Constants.NUMBER, ""), 
 	TYPE_EMAIL(Constants.STRING, "email"),

@@ -51,6 +51,13 @@ class Module {
         this.id = id;
     }
 
+    public void setOperations(Set<Operation> operations) {
+        this.operations = operations;
+    }
+
+    public Set<Operation> getOperations() {
+        return this.operations;
+    }
 
 }
 

@@ -1,5 +1,7 @@
 package com.cloudecir.module;
 
+import java.util.UUID;
+
 import com.cloudecir.model.ParameterDTO;
 
 public class ParameterMapper {
@@ -20,6 +22,29 @@ public class ParameterMapper {
         result.setSequence(parameter.getSequence());;
 
         return result;
+
+    }
+
+    public static Parameter toDatabase(ParameterDTO parameterDTO) {
+
+        Parameter parameter = new Parameter();
+        if (parameterDTO.getId() != null) {
+            parameter.setId(parameterDTO.getId());
+        } else {
+            parameter.setId(UUID.randomUUID().toString());
+        }
+        parameter.setDatatype(parameterDTO.getDatatype());
+        parameter.setDefaultValue(parameterDTO.getDefaultValue());
+        parameter.setDescription(parameterDTO.getDescription());
+        parameter.setDisplayName(parameterDTO.getDisplayName());
+        parameter.setMask(parameterDTO.getMask());
+        parameter.setMaxValue(parameterDTO.getMaxValue());
+        parameter.setMinValue(parameterDTO.getMinValue());
+        parameter.setName(parameterDTO.getName());
+        parameter.setRequired(parameterDTO.isRequired());
+        parameter.setSequence(parameterDTO.getSequence());
+
+        return parameter;
 
     }
 
